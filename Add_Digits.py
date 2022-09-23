@@ -1,18 +1,10 @@
-import math
-def digSum( n):
-    sum = 0
-     
-    while(n > 0 or sum > 9):
-     
-        if(n == 0):
-            n = sum
-            sum = 0
-         
-        sum += n % 10
-        n = n// 10
-     
-    return sum
- 
-n = int(input())
-print (digSum(n))
- 
+n=int(input())
+s=0
+while n>0:
+    r=n%10
+    s+=r
+    n=n//10
+    if n==0 and s>9:
+        n=s
+        s=0
+print(s)
