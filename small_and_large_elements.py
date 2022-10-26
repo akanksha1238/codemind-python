@@ -1,0 +1,7 @@
+s=input()
+s1=s.split(" ")
+k=list(s1[0])
+k2=list(s1[len(s1)-1])
+k.sort()
+k2.sort()
+print(k[0],k2[len(k2)-1])
