@@ -1,20 +1,16 @@
 s=input()
-s1=s.lower()
-d={}
+s3=s.replace(" ","")
+s1=s3.lower()
+n=len
+l1=[]
 for i in s1:
-    if i not in d:
-        d[i]=1
-    else:
-        d[i]+=1
+    l1.append(i)
+l1.sort()
+s3=set(l1)
+l2=list(s3)
+l2.sort()
+
 s=""
-l=[]
-for k,v in d.items():
-    if v==1:
-        l.append(k)
-l.sort()
-for i in l:
-    if i==" ":
-        l=0
-    else:
-        s+=i
+for i in l2:
+    s+=i
 print(s)
