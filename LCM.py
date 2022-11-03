@@ -1,4 +1,4 @@
-a,b=map(int,input().split())
+a,b = map(int,input().split())
 p=a*b
 while a!=b:
     if a>b:
