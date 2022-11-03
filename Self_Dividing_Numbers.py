@@ -1,12 +1,12 @@
 a=int(input())
 b=int(input())
 for i in range(a,b+1):
-    t=i
     c=0
+    t=i
     while t>0:
-        r=t%10
-        if r==0 or i%r!=0:
-            c+=1
+        rem=t%10
+        if rem==0 or i%rem!=0:
+            c=1
             break
         t=t//10
     if c==0:
