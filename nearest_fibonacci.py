@@ -1,9 +1,14 @@
 n=int(input())
-a=1
+a=0
 b=1
-while 2*n>a+b:
-    a,b=b,a+b
-if (n-a)==(b-n):
-    print(a,b)
+c=a+b
+while c<=n:
+    a=b
+    b=c
+    c=a+b
+if(n-b)<(c-n):
+    print(b)
+elif(n-b)>(c-n):
+    print(c)
 else:
-    print(a)
+    print(b,c)
