@@ -1,16 +1,17 @@
-def isPrime(n):
-    if n==0 or n==1:
-        return False
+def isprime(n):
+    if n==1:
+        return 0
     else:
-        for i in range(2,int(n**0.5)+1):
+        for i in range(2,n):
             if n%i==0:
-                return False
-                break
-        return True
-num=int(input())
+                return 0
+        else:
+            return 1
+n=int(input())
 c=0
-for i in range(1,num+1):
-    if num%i==0 and isPrime(i)==False:
-        c+=1
+for i in range(1,n+1):
+    if n%i==0:
+        s=isprime(i)
+        if s==0:
+            c=c+1
 print(c)
-    
